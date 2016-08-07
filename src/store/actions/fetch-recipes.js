@@ -3,7 +3,7 @@ import FetchPolyfill from 'whatwg-fetch';
 export default () => dispatch => {
   dispatch({ type: 'FETCH_RECIPES_START' });
 
-  return fetch( 'http://localhost:3000/recipes' )
+  return fetch( 'http://192.168.10.10:3000/recipes' )
     .then( res => {
       if ( res.status < 200 || res.status >= 300 ) {
         throw new Error();
